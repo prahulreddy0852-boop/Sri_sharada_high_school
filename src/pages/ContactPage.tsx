@@ -18,7 +18,6 @@ import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import type { Route } from '../lib/router';
 import { useScrollReveal } from '../lib/hooks';
-import { supabase } from '../lib/supabase';
 import { SCHOOL } from '../lib/data';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
@@ -32,7 +31,7 @@ export default function ContactPage({
   const [status, setStatus] = useState<Status>('idle');
   const [error, setError] = useState('');
 
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('submitting');
     setError('');
@@ -45,14 +44,10 @@ export default function ContactPage({
       subject: data.get('subject'),
       message: data.get('message'),
     };
-    const { error: err } = await supabase.from('contact_messages').insert([payload]);
-    if (err) {
-      setStatus('error');
-      setError(err.message || 'Something went wrong.');
-    } else {
-      setStatus('success');
-      form.reset();
-    }
+
+    console.info('Contact form submitted locally', payload);
+    setStatus('success');
+    form.reset();
   };
 
   return (

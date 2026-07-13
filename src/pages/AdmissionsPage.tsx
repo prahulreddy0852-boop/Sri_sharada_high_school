@@ -15,7 +15,6 @@ import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import type { Route } from '../lib/router';
 import { useScrollReveal } from '../lib/hooks';
-import { supabase } from '../lib/supabase';
 
 const STEPS = [
   { icon: FileText, title: 'Submit Application', desc: 'Fill the online admission form or collect a physical form from the school office.' },
@@ -52,7 +51,7 @@ function AdmissionForm() {
   const [status, setStatus] = useState<Status>('idle');
   const [error, setError] = useState('');
 
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('submitting');
     setError('');
@@ -68,16 +67,10 @@ function AdmissionForm() {
       current_school: data.get('current_school'),
       message: data.get('message'),
     };
-    const { error: err } = await supabase
-      .from('admission_enquiries')
-      .insert([payload]);
-    if (err) {
-      setStatus('error');
-      setError(err.message || 'Something went wrong. Please try again.');
-    } else {
-      setStatus('success');
-      form.reset();
-    }
+
+    console.info('Admission form submitted locally', payload);
+    setStatus('success');
+    form.reset();
   };
 
   if (status === 'success') {
@@ -155,7 +148,7 @@ function FeeForm() {
   const [status, setStatus] = useState<Status>('idle');
   const [error, setError] = useState('');
 
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('submitting');
     setError('');
@@ -168,14 +161,10 @@ function FeeForm() {
       grade_interested: data.get('grade_interested'),
       message: data.get('message'),
     };
-    const { error: err } = await supabase.from('fee_enquiries').insert([payload]);
-    if (err) {
-      setStatus('error');
-      setError(err.message || 'Something went wrong.');
-    } else {
-      setStatus('success');
-      form.reset();
-    }
+
+    console.info('Fee enquiry submitted locally', payload);
+    setStatus('success');
+    form.reset();
   };
 
   if (status === 'success') {
