@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply font-sans text-slate-700 bg-white;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif text-brand-950;
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply mx-auto max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-semibold tracking-wide transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+  .btn-primary {
+    @apply btn bg-brand-700 text-white shadow-lg shadow-brand-700/30 hover:bg-brand-800 hover:-translate-y-0.5 focus-visible:ring-brand-600;
+  }
+  .btn-gold {
+    @apply btn bg-gold-500 text-brand-950 shadow-lg shadow-gold-500/30 hover:bg-gold-400 hover:-translate-y-0.5 focus-visible:ring-gold-500;
+  }
+  .btn-outline {
+    @apply btn border border-white/70 text-white hover:bg-white hover:text-brand-800 focus-visible:ring-white;
+  }
+  .btn-ghost {
+    @apply btn border border-brand-200 text-brand-700 hover:bg-brand-50 focus-visible:ring-brand-500;
+  }
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-gold-600;
+  }
+  .card {
+    @apply rounded-2xl border border-slate-100 bg-white shadow-sm transition-all duration-300;
+  }
+  .input-field {
+    @apply w-full rounded-xl border border-slate-200 bg-slate-50/60 px-4 py-3 text-sm text-slate-800 placeholder-slate-400 transition focus:border-brand-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20;
+  }
+  .label-field {
+    @apply mb-1.5 block text-sm font-semibold text-slate-700;
+  }
+}
+
+/* Reveal-on-scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #eef5ff; }
+::-webkit-scrollbar-thumb { background: #1a55db; border-radius: 999px; border: 2px solid #eef5ff; }
+::-webkit-scrollbar-thumb:hover { background: #1542b0; }
+
+/* Gold gradient text */
+.text-gradient-gold {
+  background: linear-gradient(120deg, #d4a017, #e7c25a, #b8840f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
