@@ -70,7 +70,7 @@ export default function Navbar({
                 scrolled ? 'text-brand-800' : 'text-white'
               }`}
             >
-              Sri Sharada School
+              Sri Sharada High School
             </span>
             <span
               className={`block text-[11px] font-semibold uppercase tracking-[0.18em] ${

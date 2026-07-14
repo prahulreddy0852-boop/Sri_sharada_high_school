@@ -141,23 +141,15 @@ export default function HomePage({
   return (
     <div ref={ref}>
       {/* Hero */}
-      <section className="relative flex min-h-[100vh] items-center overflow-hidden bg-brand-950">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.pexels.com/photos/8617715/pexels-photo-8617715.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Students learning at Sri Sharada School"
-            className="h-full w-full object-cover opacity-25"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-brand-950 via-brand-900/90 to-brand-800/70" />
-        </div>
+      <section className="relative flex min-h-[100vh] items-center overflow-hidden bg-[url('/logo.png')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="pointer-events-none absolute -right-32 top-20 h-96 w-96 rounded-full bg-gold-500/15 blur-3xl" />
+        <div className="pointer-events-none absolute -left-32 bottom-10 h-96 w-96 rounded-full bg-brand-500/20 blur-3xl" />
         <div className="pointer-events-none absolute -right-32 top-20 h-96 w-96 rounded-full bg-gold-500/15 blur-3xl" />
         <div className="pointer-events-none absolute -left-32 bottom-10 h-96 w-96 rounded-full bg-brand-500/20 blur-3xl" />
 
         <div className="container-px relative z-10 pt-28 pb-16">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold-400/40 bg-gold-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-gold-300">
-              <Sparkles className="h-3.5 w-3.5" />
-            </span>
             <h1 className="mt-6 text-4xl font-bold leading-[1.1] !text-white sm:text-5xl lg:text-6xl">
               Empowering Young Minds for a{' '}
               <span className="text-gradient-gold">Brighter Future</span>
