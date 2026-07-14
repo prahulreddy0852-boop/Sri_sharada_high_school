@@ -141,10 +141,8 @@ export default function HomePage({
   return (
     <div ref={ref}>
       {/* Hero */}
-      <section className="relative flex min-h-[100vh] items-center overflow-hidden bg-[url('/logo.png')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="pointer-events-none absolute -right-32 top-20 h-96 w-96 rounded-full bg-gold-500/15 blur-3xl" />
-        <div className="pointer-events-none absolute -left-32 bottom-10 h-96 w-96 rounded-full bg-brand-500/20 blur-3xl" />
+      <section className="relative flex min-h-[100vh] items-center overflow-hidden bg-slate-950">
+        <div className="absolute inset-0 bg-black/10" />
         <div className="pointer-events-none absolute -right-32 top-20 h-96 w-96 rounded-full bg-gold-500/15 blur-3xl" />
         <div className="pointer-events-none absolute -left-32 bottom-10 h-96 w-96 rounded-full bg-brand-500/20 blur-3xl" />
 
