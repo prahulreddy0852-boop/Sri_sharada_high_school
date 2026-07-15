@@ -113,12 +113,6 @@ export default function Navbar({
           })}
         </nav>
 
-        <div className="hidden items-center gap-3 xl:flex">
-          <button onClick={() => go('admissions')} className="btn-gold text-xs">
-            Admissions Open
-          </button>
-        </div>
-
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen((v) => !v)}
@@ -151,9 +145,6 @@ export default function Navbar({
               {item.label}
             </button>
           ))}
-          <button onClick={() => go('admissions')} className="btn-gold mt-2 w-full">
-            Admissions Open
-          </button>
         </nav>
       </div>
     </header>

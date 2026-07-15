@@ -12,7 +12,7 @@ import type { Route } from '../lib/router';
 import { useScrollReveal } from '../lib/hooks';
 
 const ANNOUNCEMENTS = [
-  { date: 'Jul 10, 2026', title: 'Admissions Open for 2026-27', desc: 'Applications are now being accepted for all grades. Limited seats available.', tag: 'Admissions' },
+  { date: 'Jul 10, 2026', title: 'New Academic Session Begins Soon', desc: 'Preparations are underway for the next session with new classes, staff and updated course activities.', tag: 'Announcement' },
   { date: 'Jul 5, 2026', title: 'Parent-Teacher Meeting', desc: 'PTM scheduled for July 19, 10 AM onwards for all grades.', tag: 'Notice' },
   { date: 'Jun 28, 2026', title: 'New Science Lab Inaugurated', desc: 'Our upgraded Biology lab was inaugurated by the District Education Officer.', tag: 'Campus' },
 ];

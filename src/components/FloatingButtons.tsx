@@ -13,7 +13,7 @@ export default function FloatingButtons() {
         <Phone className="relative h-5 w-5" />
       </a>
       <a
-        href={`https://wa.me/${SCHOOL.whatsapp}?text=Hello%20Sri%20Sharada%20School%2C%20I%20would%20like%20to%20enquire%20about%20admissions.`}
+        href={`https://wa.me/${SCHOOL.whatsapp}?text=Hello%20Sri%20Sharada%20School%2C%20I%20would%20like%20to%20enquire%20about%20the%20school.`}
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"

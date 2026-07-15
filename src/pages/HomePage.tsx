@@ -10,10 +10,9 @@
   ChevronDown,
   CheckCircle2,
   Sparkles,
-  Building2,
   Award,
 } from 'lucide-react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import SectionHeading from '../components/SectionHeading';
 import { SCHOOL } from '../lib/data';
 import type { Route } from '../lib/router';
@@ -94,12 +93,12 @@ const FAQS = [
     a: 'Yes, we operate a fleet of GPS-enabled buses covering Narayanpet and surrounding villages with trained attendants on every route.',
   },
   {
-    q: 'How can I apply for admission?',
-    a: 'You can fill out the online admission form on our Admissions page or visit the school office. Our team will guide you through every step.',
+    q: 'How can I get more information about the school?',
+    a: 'Please contact the school office or use the enquiry form. Our support team will be happy to help you.',
   },
   {
     q: 'Are there scholarships or fee concessions?',
-    a: 'Merit-based and need-based concessions are available. Please contact the school office or submit a fee enquiry form for details.',
+    a: 'Merit-based and need-based concessions are available. Please contact the school office for details.',
   },
 ];
 
@@ -137,6 +136,11 @@ export default function HomePage({
   navigate: (r: Route) => void;
 }) {
   const ref = useScrollReveal<HTMLDivElement>();
+  const whyChooseRef = useRef<HTMLDivElement>(null);
+
+  const scrollToWhyChoose = () => {
+    whyChooseRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   return (
     <div ref={ref}>
@@ -153,23 +157,18 @@ export default function HomePage({
               <span className="text-gradient-gold">Brighter Future</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/75">
-              A premier SSC school in Narayanpet, Mahabubnagar — nurturing
+              A premier SSC school in Maddur, Narayanpet — nurturing
               curious, confident and compassionate learners through
               future-ready education.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <button onClick={() => navigate('admissions')} className="btn-gold">
-                Admissions Open <ArrowRight className="h-4 w-4" />
+              <button onClick={() => navigate('contact')} className="btn-gold">
+                Contact Us <ArrowRight className="h-4 w-4" />
               </button>
-              <button onClick={() => navigate('contact')} className="btn-outline">
-                Contact Us
+              <button onClick={scrollToWhyChoose} className="btn-outline">
+                Explore Facilities
               </button>
-              <button
-                onClick={() => navigate('admissions')}
-                className="btn border border-white/30 bg-white/5 text-white backdrop-blur hover:bg-white/15"
-              >
-                Enquire Now
-              </button>
+
             </div>
 
             {/* Stats strip */}
@@ -195,7 +194,7 @@ export default function HomePage({
       </section>
 
       {/* Highlights */}
-      <section className="bg-white py-20 lg:py-28">
+      <section ref={whyChooseRef} className="bg-white py-20 lg:py-28">
         <div className="container-px">
           <SectionHeading
             eyebrow="Why Choose Us"
@@ -227,25 +226,20 @@ export default function HomePage({
           <div className="reveal relative">
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/8617842/pexels-photo-8617842.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src="/hero.jpg"
                 alt="School campus"
                 className="aspect-[4/3] w-full object-cover"
+                loading="lazy"
+                onError={(e: any) => {
+                  try {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = '/hero.svg';
+                  } catch {}
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-950/40 to-transparent" />
             </div>
-            <div className="absolute -bottom-6 -right-2 flex items-center gap-4 rounded-2xl bg-white p-5 shadow-xl sm:right-6">
-              <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-gold-500 text-brand-950">
-                <Building2 className="h-7 w-7" />
-              </span>
-              <div>
-                <p className="font-serif text-2xl font-bold text-brand-900">
-                  Est. {SCHOOL.established}
-                </p>
-                <p className="text-xs font-medium text-slate-500">
-                  Two decades of trust
-                </p>
-              </div>
-            </div>
+
           </div>
           <div>
             <SectionHeading
@@ -256,7 +250,6 @@ export default function HomePage({
             />
             <ul className="mt-7 space-y-3">
               {[
-                'Affiliated to SSC, New Delhi',
                 'Student-teacher ratio of 20:1',
                 'Holistic development through arts & sports',
                 'Safe, inclusive and joyful campus',
@@ -322,15 +315,15 @@ export default function HomePage({
         <div className="container-px relative flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
           <div>
             <h2 className="!text-white text-3xl font-bold sm:text-4xl">
-              Ready to join the Sri Sharada family?
+              Discover what makes Sri Sharada School special.
             </h2>
             <p className="mt-3 text-white/75">
-              Admissions for 2026-27 are now open. Secure your child's seat today.
+              Learn more about our academic approach, campus life, and student achievements.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
-            <button onClick={() => navigate('admissions')} className="btn-gold">
-              Apply for Admission
+            <button onClick={() => navigate('about')} className="btn-gold">
+              Learn More
             </button>
             <button
               onClick={() => navigate('facilities')}

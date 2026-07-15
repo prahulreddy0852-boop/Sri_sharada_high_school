@@ -5,7 +5,6 @@ import Seo from './components/Seo';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import AcademicsPage from './pages/AcademicsPage';
-import AdmissionsPage from './pages/AdmissionsPage';
 import FacilitiesPage from './pages/FacilitiesPage';
 import GalleryPage from './pages/GalleryPage';
 import AchievementsPage from './pages/AchievementsPage';
@@ -21,7 +20,6 @@ function App() {
       case 'home': return <HomePage navigate={navigate} />;
       case 'about': return <AboutPage navigate={navigate} />;
       case 'academics': return <AcademicsPage navigate={navigate} />;
-      case 'admissions': return <AdmissionsPage navigate={navigate} />;
       case 'facilities': return <FacilitiesPage navigate={navigate} />;
       case 'gallery': return <GalleryPage navigate={navigate} />;
       case 'achievements': return <AchievementsPage navigate={navigate} />;

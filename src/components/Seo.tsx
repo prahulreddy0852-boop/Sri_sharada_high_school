@@ -4,7 +4,7 @@ const META: Record<string, { title: string; description: string }> = {
   home: {
     title: 'Sri Sharada School, Maddur | SSC School in Narayanpet, Telangana',
     description:
-      'A premier SSC school in Narayanpet, Mahabubnagar. Smart classrooms, experienced faculty, safe campus. Admissions open.',
+      'A premier SSC school in Narayanpet, Mahabubnagar. Smart classrooms, experienced faculty, and a safe campus for future-ready learners.',
   },
   about: {
     title: 'About Us | Sri Sharada School, Maddur',
@@ -15,11 +15,6 @@ const META: Record<string, { title: string; description: string }> = {
     title: 'Academics | Sri Sharada School, Maddur',
     description:
       'SSC curriculum from pre-primary to secondary. Student-centric teaching methodology and structured examination pattern.',
-  },
-  admissions: {
-    title: 'Admissions | Sri Sharada School, Maddur',
-    description:
-      'Admission process, eligibility, required documents, fee enquiry form and prospectus download.',
   },
   facilities: {
     title: 'Facilities | Sri Sharada School, Maddur',

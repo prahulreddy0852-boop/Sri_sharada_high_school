@@ -22,13 +22,10 @@
 
 export const NAV_ITEMS: { label: string; route: string }[] = [
   { label: 'Home', route: 'home' },
-  { label: 'About', route: 'about' },
   { label: 'Academics', route: 'academics' },
-  { label: 'Admissions', route: 'admissions' },
   { label: 'Facilities', route: 'facilities' },
   { label: 'Gallery', route: 'gallery' },
   { label: 'Achievements', route: 'achievements' },
-  { label: 'News', route: 'news' },
   { label: 'Contact', route: 'contact' },
 ];
 

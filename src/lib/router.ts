@@ -4,7 +4,6 @@ export type Route =
   | 'home'
   | 'about'
   | 'academics'
-  | 'admissions'
   | 'facilities'
   | 'gallery'
   | 'achievements'
@@ -17,7 +16,6 @@ const routeMap: Record<string, Route> = {
   '#home': 'home',
   '#about': 'about',
   '#academics': 'academics',
-  '#admissions': 'admissions',
   '#facilities': 'facilities',
   '#gallery': 'gallery',
   '#achievements': 'achievements',

@@ -28,11 +28,11 @@ export default function PageHero({
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-white/70">{subtitle}</p>
         <div className="mt-7 flex flex-wrap gap-3">
-          <button onClick={() => navigate('admissions')} className="btn-gold">
-            Admissions Open
-          </button>
-          <button onClick={() => navigate('contact')} className="btn-outline">
+          <button onClick={() => navigate('contact')} className="btn-gold">
             Contact Us
+          </button>
+          <button onClick={() => navigate('about')} className="btn-outline">
+            Learn More
           </button>
         </div>
       </div>

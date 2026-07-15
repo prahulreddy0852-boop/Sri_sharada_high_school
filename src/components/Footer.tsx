@@ -114,23 +114,16 @@ export default function Footer({
         {/* CTA */}
         <div>
           <h4 className="text-sm font-bold uppercase tracking-[0.18em] text-white">
-            Admissions
+            Contact Us
           </h4>
           <p className="mt-5 text-sm leading-relaxed">
-            Admissions are open for the academic year 2026-27. Limited seats
-            available across all grades.
+            Reach out to Sri Sharada School for enquiries about academics, campus visits, or school services.
           </p>
           <button
-            onClick={() => navigate('admissions')}
+            onClick={() => navigate('contact')}
             className="btn-gold mt-5 w-full"
           >
-            Apply Now
-          </button>
-          <button
-            onClick={() => navigate('contact')}
-            className="btn mt-3 w-full border border-white/20 text-white hover:bg-white/10"
-          >
-            Contact Us
+            Send a Message
           </button>
         </div>
       </div>
