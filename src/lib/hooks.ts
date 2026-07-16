@@ -10,21 +10,10 @@ export function useScrollReveal<T extends HTMLElement>() {
   useEffect(() => {
     const root = ref.current;
     if (!root) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }
-    );
 
-    const items = root.querySelectorAll('.reveal');
-    items.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    root.querySelectorAll('.reveal').forEach((el) => {
+      el.classList.remove('is-visible');
+    });
   }, []);
 
   return ref;

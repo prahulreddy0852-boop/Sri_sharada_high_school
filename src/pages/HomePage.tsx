@@ -14,7 +14,6 @@
 } from 'lucide-react';
 import { useRef, useState } from 'react';
 import SectionHeading from '../components/SectionHeading';
-import { SCHOOL } from '../lib/data';
 import type { Route } from '../lib/router';
 import { useScrollReveal } from '../lib/hooks';
 
@@ -54,7 +53,6 @@ const HIGHLIGHTS = [
 const STATS = [
   { value: '20+', label: 'Years of Excellence' },
   { value: '1200+', label: 'Happy Students' },
-  { value: '60+', label: 'Expert Educators' },
   { value: '100%', label: 'SSC Results' },
 ];
 
@@ -168,13 +166,12 @@ export default function HomePage({
               <button onClick={scrollToWhyChoose} className="btn-outline">
                 Explore Facilities
               </button>
-
             </div>
 
             {/* Stats strip */}
             <div className="mt-14 grid max-w-2xl grid-cols-2 gap-4 sm:grid-cols-4">
               {STATS.map((s) => (
-                <div key={s.label} className="reveal">
+                <div key={s.label}>
                   <p className="font-serif text-3xl font-bold text-gold-400">
                     {s.value}
                   </p>
