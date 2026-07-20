@@ -31,9 +31,6 @@ export default function PageHero({
           <button onClick={() => navigate('contact')} className="btn-gold">
             Contact Us
           </button>
-          <button onClick={() => navigate('about')} className="btn-outline">
-            Learn More
-          </button>
         </div>
       </div>
     </section>
