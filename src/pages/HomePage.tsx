@@ -10,7 +10,6 @@
   ChevronDown,
   CheckCircle2,
   Sparkles,
-  Building2,
   Award,
 } from 'lucide-react';
 import { useState } from 'react';
@@ -143,7 +142,7 @@ export default function HomePage({
       <section className="relative flex min-h-[100vh] items-center overflow-hidden bg-brand-950">
         <div className="absolute inset-0">
           <img
-            src="public/WhatsApp Image 2026-07-14 at 5.57.51 PM (1).jpeg"
+            src="/hero.svg"
             alt="Students learning at Sri Sharada School"
             className="h-full w-full object-cover opacity-25"
           />
