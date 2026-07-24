@@ -142,7 +142,7 @@ export default function HomePage({
       <section className="relative flex min-h-[100vh] items-center overflow-hidden bg-brand-950">
         <div className="absolute inset-0">
           <img
-            src="/hero.svg"
+            src="/WhatsApp Image 2026-07-14 at 5.57.51 PM (1).jpeg"
             alt="Students learning at Sri Sharada School"
             className="h-full w-full object-cover opacity-25"
           />
@@ -228,7 +228,7 @@ export default function HomePage({
           <div className="reveal relative">
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="public/hero.svg"
+                src="/hero.svg"
                 alt="School campus"
                 className="aspect-[4/3] w-full object-cover"
               />
