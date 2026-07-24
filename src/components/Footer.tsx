@@ -10,7 +10,8 @@
   Twitter,
   ArrowUpRight,
 } from 'lucide-react';
-import { NAV_ITEMS, SCHOOL } from '../lib/data';
+import { NAV_ITEMS } from '../lib/data';
+import { SCHOOL } from "../lib/SCHOOL";
 import type { Route } from '../lib/router';
 
 export default function Footer({

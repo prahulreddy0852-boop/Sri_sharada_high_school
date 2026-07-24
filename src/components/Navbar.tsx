@@ -1,6 +1,7 @@
 ﻿import { Menu, X, Phone } from 'lucide-react';
 import { useState } from 'react';
-import { NAV_ITEMS, SCHOOL } from '../lib/data';
+import { NAV_ITEMS } from '../lib/data';
+import { SCHOOL } from "../lib/SCHOOL";
 import type { Route } from '../lib/router';
 import { useScrolled } from '../lib/hooks';
 

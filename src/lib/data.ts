@@ -1,28 +1,5 @@
-﻿export const SCHOOL = {
-  name: 'Sri Sharada School',
-  location: 'Maddur, Narayanpet, Mahabubnagar, Telangana',
-  shortLocation: 'Maddur, Narayanpet',
-  phone: '+91 90000 00000',
-  phoneRaw: '+919000000000',
-  altPhone: '+91 91111 11111',
-  email: 'info@srisharadamaddur.edu.in',
-  whatsapp: '919000000000',
-  hours: 'Mon – Sat: 8:00 AM – 4:00 PM',
-  established: 2005,
-  affiliation: 'SSC, New Delhi',
-  mapEmbed:
-    'https://www.google.com/maps?q=Maddur,Narayanpet,Mahabubnagar,Telangana&output=embed',
-  social: {
-    facebook: 'https://facebook.com',
-    instagram: 'https://instagram.com',
-    youtube: 'https://youtube.com',
-    twitter: 'https://twitter.com',
-  },
-};
-
-export const NAV_ITEMS: { label: string; route: string }[] = [
-  { label: 'Home', route: 'home' },
-  { label: 'Academics', route: 'academics' },
+﻿export const NAV_ITEMS: { label: string; route: string }[] = [
+  { label: 'Home', route: 'home' },  
   { label: 'Facilities', route: 'facilities' },
   { label: 'Gallery', route: 'gallery' },
   { label: 'Achievements', route: 'achievements' },

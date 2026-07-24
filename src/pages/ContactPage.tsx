@@ -18,7 +18,7 @@ import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import type { Route } from '../lib/router';
 import { useScrollReveal } from '../lib/hooks';
-import { SCHOOL } from '../lib/data';
+import { SCHOOL } from "../lib/SCHOOL";
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 

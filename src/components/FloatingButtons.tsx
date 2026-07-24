@@ -1,5 +1,5 @@
 ﻿import { Phone, MessageCircle } from 'lucide-react';
-import { SCHOOL } from '../lib/data';
+import { SCHOOL } from "../lib/SCHOOL";
 
 export default function FloatingButtons() {
   return (

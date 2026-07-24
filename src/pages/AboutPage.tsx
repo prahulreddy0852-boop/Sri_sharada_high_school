@@ -13,7 +13,7 @@ import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import type { Route } from '../lib/router';
 import { useScrollReveal } from '../lib/hooks';
-import { SCHOOL } from '../lib/data';
+import { SCHOOL } from "../lib/SCHOOL";
 
 const VALUES = [
   { icon: Heart, title: 'Compassion', desc: 'Kindness and empathy guide every interaction in our community.' },

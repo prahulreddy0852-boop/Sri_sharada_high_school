@@ -1,6 +1,6 @@
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <!-- Outer circle -->
-  <circle cx="100" cy="100" r="95" fill="#163270" stroke="#D4A52E" stroke-width="4"/>
+  <circle cx="100" cy="100" r="95" fill="#a6a7a7" stroke="#D4A52E" stroke-width="4"/>
   
   <!-- Inner circle -->
   <circle cx="100" cy="100" r="85" fill="#FFFBF0"/>

@@ -15,7 +15,6 @@
 } from 'lucide-react';
 import { useState } from 'react';
 import SectionHeading from '../components/SectionHeading';
-import { SCHOOL } from '../lib/data';
 import type { Route } from '../lib/router';
 import { useScrollReveal } from '../lib/hooks';
 
@@ -144,7 +143,7 @@ export default function HomePage({
       <section className="relative flex min-h-[100vh] items-center overflow-hidden bg-brand-950">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/8617715/pexels-photo-8617715.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="public/WhatsApp Image 2026-07-14 at 5.57.51 PM (1).jpeg"
             alt="Students learning at Sri Sharada School"
             className="h-full w-full object-cover opacity-25"
           />
@@ -168,18 +167,11 @@ export default function HomePage({
               future-ready education.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <button onClick={() => navigate('admissions')} className="btn-gold">
-                Admissions Open <ArrowRight className="h-4 w-4" />
-              </button>
+              
               <button onClick={() => navigate('contact')} className="btn-outline">
                 Contact Us
               </button>
-              <button
-                onClick={() => navigate('admissions')}
-                className="btn border border-white/30 bg-white/5 text-white backdrop-blur hover:bg-white/15"
-              >
-                Enquire Now
-              </button>
+              
             </div>
 
             {/* Stats strip */}
@@ -237,25 +229,13 @@ export default function HomePage({
           <div className="reveal relative">
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/8617842/pexels-photo-8617842.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src="public/hero.svg"
                 alt="School campus"
                 className="aspect-[4/3] w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-950/40 to-transparent" />
             </div>
-            <div className="absolute -bottom-6 -right-2 flex items-center gap-4 rounded-2xl bg-white p-5 shadow-xl sm:right-6">
-              <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-gold-500 text-brand-950">
-                <Building2 className="h-7 w-7" />
-              </span>
-              <div>
-                <p className="font-serif text-2xl font-bold text-brand-900">
-                  Est. {SCHOOL.established}
-                </p>
-                <p className="text-xs font-medium text-slate-500">
-                  Two decades of trust
-                </p>
-              </div>
-            </div>
+           
           </div>
           <div>
             <SectionHeading
@@ -339,9 +319,7 @@ export default function HomePage({
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
-            <button onClick={() => navigate('admissions')} className="btn-gold">
-              Apply for Admission
-            </button>
+            
             <button
               onClick={() => navigate('facilities')}
               className="btn border border-white/30 text-white hover:bg-white/10"
